@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Mídias em html 5</title>
+  </head>
+  <body>
+    <h1>Imagens dinamicas</h1>
+    <p>Abrir esse site em vários dispositivos</p>
+    <!-- A tag <picture> em HTML é usada para dar flexibilidade aos desenvolvedores da web para especificar recursos de imagem. A tag <picture> contém as tags <source> e <img> . O valor do atributo é definido para carregar uma imagem mais apropriada. 
+O elemento <img> é usado para o último elemento filho do bloco de declaração de imagem. O elemento <img> é usado para fornecer compatibilidade com versões anteriores para navegadores que não suportam o elemento, ou se nenhuma das tags de origem corresponderem. 
+
+A tag <picture> é semelhante a <video> e <audio>. Adicionamos fontes diferentes, e a primeira fonte que se encaixa nas preferências é aquela que será usada. -->
+    <picture>
+      <source
+        media="(max-width: 750px)"
+        srcset="imagens/foto-p.png"
+        type="image/png"
+      />
+      <source
+        media="(max-width: 1050px )"
+        srcset="imagens/foto-m.png"
+        type="image/png"
+      />
+      <img src="imagens/foto-g.png" alt="imagem flexível" />
+    </picture>
+    <h1>reproduzir audio</h1>
+    <p>Vamos reproduzir audio</p>
+    <audio preload="metadata" autoplay controls loop>
+      <source src="midia/dudaru.mp3" type="audio/mpeg" />
+      <source src="midia/dudaru.ogg" type="audio/ogg" />
+      <source src="midia/dudaru.wav" type="audio/wav" />
+    </audio>
+  </body>
+</html>
